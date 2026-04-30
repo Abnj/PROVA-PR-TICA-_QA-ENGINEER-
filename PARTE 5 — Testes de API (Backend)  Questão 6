@@ -4,22 +4,42 @@ Para esse endpoint, eu realizaria validações funcionais, estruturais, de contr
 segurança e integridade dos dados, garantindo que a API retorne corretamente as parcelas vencidas.
 
 1 - Validações Funcionais
-1.1 Retorno apenas de parcelas com status VENCIDA, Quantidade correta de registros, Paginação da API, Ordenação dos resultados
+1.1 Validações:
+• retornar apenas parcelas com status VENCIDA.
+• validar a quantidade correta de registros.
+• validar paginação da API.
+• validar ordenação dos resultados.
 
 2 - Validações de Estrutura da Resposta
-2.1 Status code HTTP correto, Content-Type da resposta, Estrutura JSON, Campos obrigatórios
+2.1 Validações:
+• status code HTTP correto
+• Content-Type da resposta
+• estrutura JSON válida
+• presença dos campos obrigatórios
 
 3 - Validações de Regra de Negócio
-3.1 Parcelas retornadas com data inferior à data atual, Parcelas pagas não devem ser retornadas, Não permitir duplicidade de parcelas
+3.1 Validações:
+• parcelas retornadas com data inferior à data atual.
+• parcelas pagas não devem ser retornadas;
+• não permitir duplicidade de parcelas.
 
 4 - Validações Negativas
-4.1 Status inválido, Endpoint sem autenticação, Token expirado
+4.1 Validações:
+• envio de status inválido.
+• acesso ao endpoint sem autenticação.
+• utilização de token expirado.
 
 5 - Validações de Segurança
-5.1 Necessidade de autenticação, Permissão de acesso, Exposição indevida de dados
+5.1 Validações:
+• não exposição indevida de dados financeiros.
+• permissão de acesso ao recurso.
+• necessidade de autenticação.
 
 6 - Validações de Performance
-6.1 Tempo de resposta aceitável, Comportamento com grande volume, Estabilidade da API
+6.1 Validações:
+• tempo de resposta aceitável.
+• comportamento com grande volume de dados.
+• estabilidade da API sob carga.
 
 • Escreva um exemplo de teste automatizado (pode ser Cypress ou outra lib) 
 
