@@ -1,49 +1,93 @@
 A validação de performance deve garantir que tanto o backend quanto o frontend suportem o volume de uso esperado sem degradação da experiência do usuário.
 Para o módulo Painel de Parcelas, eu validaria performance em duas camadas:
 
-Backend (API de parcelas)
-Frontend (Painel de Parcelas)
+• backend (API de parcelas).
+• frontend (Painel de Parcelas).
 
-- Performance do Endpoint de Parcelas
+1 - Performance do Endpoint de Parcelas.
 
-1 - Tipos de Testes de Performance - Teste de Carga (Load Test)
-Validar comportamento da API com quantidade esperada de usuários simultâneos.
-Objetivo: Garantir que a API, Responda rapidamente, Suporte múltiplos usuários Simultâneos, Mantenha estabilidade.
+1.1 - Tipos de Testes de Performance - Teste de Carga (Load Test).
+Objetivo:
+Validar o comportamento da API com a quantidade esperada de usuários simultâneos.
+Validações:
+• tempo de resposta.
+• estabilidade.
+• suporte a múltiplos acessos simultâneos.
+• processamento correto das requisições.
 
-2 - Teste de Stress
-Validar limite máximo suportado pela API.
-Objetivo: Identificar ponto de falha, Gargalos, Degradação.
+1.2 - Teste de Stress.
+Objetivo:
+Validar o limite máximo suportado pela API.
+Validações:
+• identificação de gargalos.
+• ponto de falha.
+• degradação da aplicação.
+• comportamento sob alta carga.
 
-3 - Teste de Pico (Spike Test)
-Validar aumento repentino de acessos.
-Objetivo: como o sistema se comporta diante de aumentos repentinos e extremos de carga em um curto período de tempo.
+1.3 - Teste de Pico (Spike Test).
+Objetivo:
+Validar como o sistema se comporta diante de aumentos repentinos e extremos de carga em um curto período de tempo.
+Validações:
+• Múltiplos acessos simultâneos durante fechamento financeiro do mês.
 
-- Ferramentas para Backend
-4 - k6, JMeter, Postman + Newman
+2 - Ferramentas para Backend.
+• K6.
+• Apache JMeter.
+• Postman + Newman.
 
--  Métricas Observadas no Backend
-5 - Tempo de Resposta, Throughput, Taxa de Erro, Uso de Recursos.
+3 - Métricas Observadas no Backend.
+• tempo de resposta.
+• throughput.
+• taxa de erro.
+• uso de CPU e memória.
+• estabilidade da API.
+• quantidade de requisições por segundo.
 
-- Performance do Painel no Frontend
+4 - Performance do Painel no Frontend
 
-6 - Tempo de carregamento do painel
-Validar tempo até exibir as parcelas.
-Objetivo: validar que o usuário consiga acessar e visualizar as informações do sistema de forma rápida e eficiente.
+4.1 Tempo de Carregamento do Painel.
+Objetivo:
+Validar que o usuário consiga acessar e visualizar as informações rapidamente.
+Validações:
+• carregamento inicial da tela.
+• tempo até exibição das parcelas.
+• tempo de renderização da interface.
 
-7 - Tempo de aplicação de filtros
-Validar se os filtros são aplicados em tempo aceitável.
-Objetivo: validar o tempo de aplicação de filtros é garantir que o sistema processe e apresente os resultados rapidamente.
+4.2 Tempo de Aplicação de Filtros.
+Objetivo:
+Garantir que os filtros sejam aplicados rapidamente e retornem os resultados em tempo aceitável.
+Validações:
+• tempo de processamento.
+• atualização da listagem.
+• comportamento com grande volume de registros.
 
-8 - Renderização da listagem
-Validar a renderização da listagem é garantir que a interface continue fluida.
-Objetivo: Validar comportamento com muitos registros, Scroll, Paginação.
+4.3 Renderização da Listagem.
+Objetivo:
+Garantir que a interface continue fluida mesmo com muitos registros.
+Validações:
+• scroll.
+• paginação.
+• renderização de componentes.
+• fluidez da interface.
 
-9 - Responsividade
-Validar responsividade é garantir que o painel funcione corretamente em diferentes tamanhos de tela e dispositivos.
-Objetivo: Verificar adaptação correta do layout em diferentes resoluções, Garantir legibilidade e usabilidade dos componentes da interface.
+4.4 Responsividade.
+Objetivo:
+Garantir que o painel funcione corretamente em diferentes tamanhos de tela e dispositivos.
+Validações:
+• adaptação do layout;
+• legibilidade;
+• usabilidade;
+• comportamento em diferentes resoluções.
 
-- Ferramentas para Frontend
-10 - Lighthouse, Chrome DevTools, WebPageTest
+5 - Ferramentas para Frontend.
+• Lighthouse.
+• Chrome DevTools.
+• WebPageTest.
 
-Métricas Observadas no Frontend
-11 - First Contentful Paint (FCP), Largest Contentful Paint (LCP), Uso de Memória do Navegador, FPS / Fluidez da Interface.
+6 - Métricas Observadas no Frontend.
+• First Contentful Paint (FCP).
+• Largest Contentful Paint (LCP).
+• Time To Interactive (TTI).
+• uso de memória do navegador.
+• FPS (fluidez da interface).
+• tempo de renderização da tela.
