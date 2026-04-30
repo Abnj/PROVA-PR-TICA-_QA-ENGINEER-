@@ -1,10 +1,10 @@
 Estratégia de Testes — Funcionalidade “Painel de Parcelas”
-1. Objetivo da Estratégia.
+1 - Objetivo da Estratégia.
 Garantir que o módulo Painel de Parcelas funcione corretamente em ambiente web e mobile, assegurando:
 Integridade das informações financeiras, Correta classificação das parcelas, Confiabilidade dos filtros
 Boa experiência do usuário, Segurança e estabilidade do sistema e Não regressão das funcionalidades já existentes
 
-2. Escopo da Funcionalidade.
+2 - Escopo da Funcionalidade.
 • Painel de Parcelas
 Teste de subprocessos:
 • Parcelas vencidas 
@@ -20,7 +20,7 @@ Automação focada em regressão e regras críticas
 Testes exploratórios para comportamento financeiro
 Cobertura funcional e não funcional
 
-4. Tipos de Testes Aplicados
+4 - Tipos de Testes Aplicados
 4.1 Testes Funcionais
 Objetivo: validar se a funcionalidade atende aos requisitos de negócio.
 4.2 Testes de Integração
@@ -40,7 +40,7 @@ Objetivo: garantir proteção de dados financeiros.
 4.9 Testes de Compatibilidade (Web, mobile)
 Objetivo: verificar se o sistema funciona corretamente em diferentes ambientes.
 
-5. O que automatizar
+5 - O que automatizar
 A automação deve focar em: (Cenários repetitivos, Fluxos críticos, Regressão, APIs, 
 Regras estáveis)
 5.1 Teste de APIs
@@ -49,14 +49,14 @@ Regras estáveis)
 5.4 Teste de Integração
 5.5 Teste de Performance
 
-6. O que Manter Manual
+6 - O que Manter Manual
 Alguns testes possuem melhor custo-benefício manualmente.
 6.1 Teste Exploratório
 6.2 Teste Usabilidade 
 6.3 Teste Ad hoc
 6.4 Teste de Homologação de negócio
 
-7. Pirâmide de Testes
+7 - Pirâmide de Testes
 7.1 Base — Testes Unitários (~60%)
 Cobertura: Regras de vencimento, Cálculo de parcelas, Juros e arredondamentos e etc.
 7.2 Meio — Testes de Integração/API (~20%)
