@@ -1,1 +1,97 @@
+GET /v1/parcelas?status=VENCIDA
 
+Para esse endpoint, eu realizaria validações funcionais, estruturais, de contrato,
+segurança e integridade dos dados, garantindo que a API retorne corretamente as parcelas vencidas.
+
+1 Validações Funcionais
+1.1 Retorno apenas de parcelas com status VENCIDA, Quantidade correta de registros, Paginação da API, Ordenação dos resultados
+
+2 Validações de Estrutura da Resposta
+2.1 Status code HTTP correto, Content-Type da resposta, Estrutura JSON, Campos obrigatórios
+
+3 Validações de Regra de Negócio
+3.1 Parcelas retornadas com data inferior à data atual, Parcelas pagas não devem ser retornadas, Não permitir duplicidade de parcelas
+
+4 Validações Negativas
+4.1 Status inválido, Endpoint sem autenticação, Token expirado
+
+5 Validações de Segurança
+5.1 Necessidade de autenticação, Permissão de acesso, Exposição indevida de dados
+
+6 Validações de Performance
+6.1 Tempo de resposta aceitável, Comportamento com grande volume, Estabilidade da API
+
+
+• Escreva um exemplo de teste automatizado (pode ser Cypress ou outra lib) 
+
+*** Settings ***
+Library           RequestsLibrary
+Library           Collections
+
+*** Variables ***
+${BASE_URL}       https://api.financeiro.com
+${ENDPOINT}       /v1/parcelas?status=VENCIDA
+${TOKEN}          Bearer token_exemplo
+
+*** Test Cases ***
+Validar Contrato Do Endpoint De Parcelas Vencidas
+
+    [Documentation]    Validar contrato da API de parcelas vencidas
+
+    Create Session    financeiroAPI    ${BASE_URL}
+
+    ${headers}=    Create Dictionary
+    ...    Authorization=${TOKEN}
+    ...    Content-Type=application/json
+
+    ${response}=    GET On Session
+    ...    financeiroAPI
+    ...    ${ENDPOINT}
+    ...    headers=${headers}
+
+    # Valida status HTTP
+    Should Be Equal As Integers
+    ...    ${response.status_code}
+    ...    200
+
+    # Converte resposta para JSON
+    ${body}=    Set Variable    ${response.json()}
+
+    # Valida que existe ao menos um registro
+    Length Should Be Greater Than
+    ...    ${body}
+    ...    0
+
+    # Pega primeira parcela da lista
+    ${parcela}=    Set Variable    ${body}[0]
+
+    # Validação de campos obrigatórios
+    Dictionary Should Contain Key    ${parcela}    idParcela
+    Dictionary Should Contain Key    ${parcela}    numeroParcela
+    Dictionary Should Contain Key    ${parcela}    valor
+    Dictionary Should Contain Key    ${parcela}    status
+    Dictionary Should Contain Key    ${parcela}    dataVencimento
+    Dictionary Should Contain Key    ${parcela}    cliente
+
+    # Validação de tipos
+    Should Be True    isinstance(${parcela}[idParcela], int)
+    Should Be True    isinstance(${parcela}[numeroParcela], int)
+    Should Be True    isinstance(${parcela}[valor], float)
+
+    # Validação de regra de negócio
+    Should Be Equal
+    ...    ${parcela}[status]
+    ...    VENCIDA
+
+Resposta Esperada
+
+[
+  {
+    "idParcela": 101,
+    "numeroParcela": 1,
+    "valor": 500.00,
+    "status": "VENCIDA",
+    "dataVencimento": "2026-04-01",
+    "cliente": "Empresa XPTO"
+  }
+]
