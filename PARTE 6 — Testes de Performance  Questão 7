@@ -1,1 +1,49 @@
+A validação de performance deve garantir que tanto o backend quanto o frontend suportem o volume de uso esperado sem degradação da experiência do usuário.
+Para o módulo Painel de Parcelas, eu validaria performance em duas camadas:
 
+Backend (API de parcelas)
+Frontend (Painel de Parcelas)
+
+- Performance do Endpoint de Parcelas
+
+1 - Tipos de Testes de Performance - Teste de Carga (Load Test)
+Validar comportamento da API com quantidade esperada de usuários simultâneos.
+Objetivo: Garantir que a API, Responda rapidamente, Suporte múltiplos usuários Simultâneos, Mantenha estabilidade.
+
+2 - Teste de Stress
+Validar limite máximo suportado pela API.
+Objetivo: Identificar ponto de falha, Gargalos, Degradação.
+
+3 - Teste de Pico (Spike Test)
+Validar aumento repentino de acessos.
+Objetivo: como o sistema se comporta diante de aumentos repentinos e extremos de carga em um curto período de tempo.
+
+- Ferramentas para Backend
+4 - k6, JMeter, Postman + Newman
+
+-  Métricas Observadas no Backend
+5 - Tempo de Resposta, Throughput, Taxa de Erro, Uso de Recursos.
+
+- Performance do Painel no Frontend
+
+6 - Tempo de carregamento do painel
+Validar tempo até exibir as parcelas.
+Objetivo: validar que o usuário consiga acessar e visualizar as informações do sistema de forma rápida e eficiente.
+
+7 - Tempo de aplicação de filtros
+Validar se os filtros são aplicados em tempo aceitável.
+Objetivo: validar o tempo de aplicação de filtros é garantir que o sistema processe e apresente os resultados rapidamente.
+
+8 - Renderização da listagem
+Validar a renderização da listagem é garantir que a interface continue fluida.
+Objetivo: Validar comportamento com muitos registros, Scroll, Paginação.
+
+9 - Responsividade
+Validar responsividade é garantir que o painel funcione corretamente em diferentes tamanhos de tela e dispositivos.
+Objetivo: Verificar adaptação correta do layout em diferentes resoluções, Garantir legibilidade e usabilidade dos componentes da interface.
+
+- Ferramentas para Frontend
+10 - Lighthouse, Chrome DevTools, WebPageTest
+
+Métricas Observadas no Frontend
+11 - First Contentful Paint (FCP), Largest Contentful Paint (LCP), Uso de Memória do Navegador, FPS / Fluidez da Interface.
