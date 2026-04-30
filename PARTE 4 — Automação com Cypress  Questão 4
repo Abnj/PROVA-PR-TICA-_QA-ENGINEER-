@@ -1,1 +1,77 @@
+describe('Painel de Parcelas', () => {
 
+  beforeEach(() => {
+
+    // Acessa a aplicação
+    cy.visit('/login')
+
+    // Realiza login
+    cy.get('[data-cy="input-email"]')
+      .type('qa.teste@empresa.com')
+
+    cy.get('[data-cy="input-senha"]')
+      .type('123456')
+
+    cy.get('[data-cy="btn-login"]')
+      .click()
+
+    // Valida autenticação
+    cy.url().should('contain', '/dashboard')
+
+  })
+
+  it('Deve exibir apenas parcelas vencidas no painel', () => {
+
+    // Acessa o Painel de Parcelas
+    cy.get('[data-cy="menu-painel-parcelas"]')
+      .click()
+
+    // Valida navegação
+    cy.url().should('contain', '/painel-parcelas')
+
+    // Aplica filtro de parcelas vencidas
+    cy.get('[data-cy="filtro-status"]')
+      .select('Vencidas')
+
+    // Valida carregamento da listagem
+    cy.get('[data-cy="lista-parcelas"]')
+      .should('be.visible')
+
+    // Valida quantidade de registros
+    cy.get('[data-cy="card-parcela"]')
+      .should('have.length.greaterThan', 0)
+
+    // Valida status das parcelas exibidas
+    cy.get('[data-cy="status-parcela"]')
+      .each(($status) => {
+
+        cy.wrap($status)
+          .should('contain.text', 'Vencida')
+
+      })
+
+    // Valida informações obrigatórias da parcela
+    cy.get('[data-cy="card-parcela"]')
+      .each(($parcela) => {
+
+        cy.wrap($parcela)
+          .find('[data-cy="valor-parcela"]')
+          .should('be.visible')
+
+        cy.wrap($parcela)
+          .find('[data-cy="data-vencimento"]')
+          .should('be.visible')
+
+      })
+
+    // Garante que não existam parcelas pagas
+    cy.get('[data-cy="status-parcela"]')
+      .should('not.contain.text', 'Paga')
+
+    // Garante que não existam parcelas a vencer
+    cy.get('[data-cy="status-parcela"]')
+      .should('not.contain.text', 'A Vencer')
+
+  })
+
+})
