@@ -16,7 +16,7 @@ cypress/
 │   │   ├── parcelasVencidas.cy.js
 │   │   ├── parcelasPagas.cy.js
 │   │   └── filtros.cy.js
-│   │   └── Parcelasavencer.cy.js
+│   │   └── parcelasAVencer.cy.js
 |
 ├── fixtures/
 │   ├── usuarios.json
@@ -45,26 +45,17 @@ package.json
 
 1. Page Objects
 Objetivo: Centralizar elementos e ações das páginas para:
+Local: cypress/support/pages/
 
 2. Commands (Custom Commands)
 Objetivo: Criar comandos reutilizáveis para ações comuns do sistema.
+Local: cypress/support/commands.js
 
 3. Massa de Dados
 Objetivo: Gerar dados dinâmicos durante execução.
+Local Massa Dinâmica: cypress/support/utils/
+Local Massa Fixa: cypress/fixtures/ 
 
 4 Fixtures
 Objetivo: Armazenar arquivos estáticos usados nos testes.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Local: cypress/fixtures/
