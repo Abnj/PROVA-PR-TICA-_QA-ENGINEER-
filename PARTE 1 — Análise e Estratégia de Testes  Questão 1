@@ -1,1 +1,65 @@
+Estratégia de Testes — Funcionalidade “Painel de Parcelas”
+1. Objetivo da Estratégia.
+Garantir que o módulo Painel de Parcelas funcione corretamente em ambiente web e mobile, assegurando:
+Integridade das informações financeiras, Correta classificação das parcelas, Confiabilidade dos filtros
+Boa experiência do usuário, Segurança e estabilidade do sistema e Não regressão das funcionalidades já existentes
 
+2. Escopo da Funcionalidade.
+• Painel de Parcelas
+Teste de subprocessos:
+• Parcelas vencidas 
+• Parcelas a vencer 
+• Parcelas pagas 
+• Filtro por período
+
+3. Estratégia Geral de Testes.
+A estratégia será baseada em:
+Testes orientados a risco
+Pirâmide de testes equilibrada
+Automação focada em regressão e regras críticas
+Testes exploratórios para comportamento financeiro
+Cobertura funcional e não funcional
+
+4. Tipos de Testes Aplicados
+4.1Testes Funcionais
+Objetivo: validar se a funcionalidade atende aos requisitos de negócio.
+4.2 Testes de Integração
+Objetivo: garantir comunicação correta entre módulos.
+4.3 Testes End-to-End (E2E)
+Objetivo: simular comportamento real do usuário.
+4.4 Testes de Regressão
+Objetivo: garantir que a nova funcionalidade não quebre funcionalidades existentes.
+4.5 Testes Exploratórios com ênfase em Hipótese e Sessão.
+Objetivo: Encontrar falhas não previstas em cenários reais.
+4.6 Testes de Usabilidade
+Objetivo: garantir clareza visual e facilidade de uso (UX e UI).
+4.7 Testes de Performance
+Objetivo: garantir estabilidade e tempo de resposta.
+4.8 Testes de Segurança
+Objetivo: garantir proteção de dados financeiros.
+4.9 Testes de Compatibilidade (Web, mobile)
+Objetivo: verificar se o sistema funciona corretamente em diferentes ambientes.
+
+5. O que automatizar
+A automação deve focar em: (Cenários repetitivos, Fluxos críticos, Regressão, APIs, 
+Regras estáveis)
+5.1 Teste de APIs
+5.2 Teste de UI Web/Mobile
+5.3 Teste de Regressão Automatizada
+5.4 Teste de Integração
+5.5 Teste de Performance
+
+6. O que Manter Manual
+Alguns testes possuem melhor custo-benefício manualmente.
+6.1 Teste Exploratório
+6.2 Teste Usabilidade 
+6.3 Teste Ad hoc
+6.4 Teste de Homologação de negócio
+
+7. Pirâmide de Testes
+7.1 Base — Testes Unitários (~60%)
+Cobertura: Regras de vencimento, Cálculo de parcelas, Juros e arredondamentos e etc.
+7.2 Meio — Testes de Integração/API (~20%)
+Cobertura: APIs financeiras, Banco de dados, Comunicação entre módulos e etc.
+7.3 Topo — Testes E2E/UI (~20%)
+Cobertura: Fluxos críticos completos, Jornadas reais do usuário e etc. 
