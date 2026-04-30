@@ -21,7 +21,7 @@ Testes exploratórios para comportamento financeiro
 Cobertura funcional e não funcional
 
 4. Tipos de Testes Aplicados
-4.1Testes Funcionais
+4.1 Testes Funcionais
 Objetivo: validar se a funcionalidade atende aos requisitos de negócio.
 4.2 Testes de Integração
 Objetivo: garantir comunicação correta entre módulos.
