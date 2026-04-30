@@ -8,7 +8,7 @@ Conteúdo:
 - PARTE 3 — Casos de Teste Estruturados 
 - PARTE 4 — Automação com Cypress 
 - Questão 5 — Organização de projeto Cypress
-- PRTE 5 — Testes de API (Backend) 
+- PARTE 5 — Testes de API (Backend) 
 - PARTE 6 — Testes de Performance 
 - PARTE 7 — Testes Web x Mobile
 - PARTE 8 — Colaboração com PO e DEV
