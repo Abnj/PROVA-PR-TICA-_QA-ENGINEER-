@@ -53,7 +53,7 @@ Cypress, Selenium, Playwright, Robot Framework, Lighthouse, Percy, LambdaTest.
 12 - Testes em Frontend Mobile.
 Características: adaptação correta em diferentes tamanhos de tela, diferentes tipos de smartphones, sistema operacional, aplicativo nativo, híbrido.
 
-- Principais pontos de validação no Web.
+- Principais pontos de validação no Mobile..
 
 13 - Responsividade.
 Validar: diferentes tamanhos de tela, orientações, resoluções.
