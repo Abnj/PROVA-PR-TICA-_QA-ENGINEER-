@@ -1,1 +1,14 @@
+1 - Atuação em Refinamentos.
+Costumo atuar de forma ativa nos refinamentos, detalhamento das histórias para que estejam consistentes, alinhadas com as regras de negócio e critério de aceitação.
+válido impacto de novas funcionalidades no sistema, riscos de negócio e etc.
 
+2 - Como ajudo a melhorar histórias mal escritas.
+Procuro colaborar junto ao PO, analista de negócios, gerente de projeto, dev fazendo perguntas orientadas ao comportamento do sistema, o que é esperado
+da nova funcionalidade a ser desenvolvida, .
+
+3 - Como reporto bugs.
+Busco sempre fornecer informações claras, reproduzíveis e objetivas para facilitar a análise do time de desenvolvimento.
+
+4 - Como evito retrabalho
+Evito retrabalho atuando de forma preventiva durante todo o ciclo de desenvolvimento, usando práticas de shift left.
+atuando desde refinamentos e planning para identificar gaps antes do desenvolvimento, comunicação continua com o time dev, PO, analistas e etc.
