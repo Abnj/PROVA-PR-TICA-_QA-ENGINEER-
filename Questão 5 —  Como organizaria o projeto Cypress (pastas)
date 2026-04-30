@@ -15,7 +15,7 @@ cypress/
 │   ├── painelParcelas/
 │   │   ├── parcelasVencidas.cy.js
 │   │   ├── parcelasPagas.cy.js
-│   │   └── filtros.cy.js
+│   │   ├── filtros.cy.js
 │   │   └── parcelasAVencer.cy.js
 |
 ├── fixtures/
