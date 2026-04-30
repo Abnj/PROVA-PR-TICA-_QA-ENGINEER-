@@ -1,29 +1,34 @@
 Estratégia de Testes — Funcionalidade “Painel de Parcelas”
+
 1 - Objetivo da Estratégia.
-• Integridade das informações financeiras;
-• Correta classificação das parcelas;
-• Confiabilidade dos filtros;
-• Boa experiência do usuário;
-• Segurança e estabilidade do sistema;
+
+• Integridade das informações financeiras.
+• Correta classificação das parcelas.
+• Confiabilidade dos filtros.
+• Boa experiência do usuário.
+• Segurança e estabilidade do sistema.
 • Não regressão das funcionalidades existentes.
 
 2 - Escopo da Funcionalidade.
-• Painel de Parcelas
+
+Painel de Parcelas.
 Teste de subprocessos:
-• Parcelas vencidas 
-• Parcelas a vencer 
-• Parcelas pagas 
-• Filtro por período
+• Parcelas vencidas .
+• Parcelas a vencer .
+• Parcelas pagas .
+• Filtro por período.
 
 3. Estratégia Geral de Testes.
+
 A estratégia será baseada em:
-Testes orientados a risco
-Pirâmide de testes equilibrada
-Automação focada em regressão e regras críticas
-Testes exploratórios para comportamento financeiro
-Cobertura funcional e não funcional
+• Testes orientados a risco
+• Pirâmide de testes equilibrada
+• Automação focada em regressão e regras críticas
+• Testes exploratórios para comportamento financeiro
+• Cobertura funcional e não funcional
 
 4 - Tipos de Testes Aplicados
+
 4.1 Testes Funcionais
 Objetivo: validar se a funcionalidade atende aos requisitos de negócio.
 4.2 Testes de Integração
@@ -44,8 +49,15 @@ Objetivo: garantir proteção de dados financeiros.
 Objetivo: verificar se o sistema funciona corretamente em diferentes ambientes.
 
 5 - O que automatizar
-A automação deve focar em: (Cenários repetitivos, Fluxos críticos, Regressão, APIs, 
-Regras estáveis)
+
+A automação deve focar em:
+• cenários repetitivos;
+• fluxos críticos;
+• regressão;
+• APIs;
+• regras estáveis.
+• Regras estáveis)
+
 5.1 Teste de APIs
 5.2 Teste de UI Web/Mobile
 5.3 Teste de Regressão Automatizada
@@ -53,13 +65,15 @@ Regras estáveis)
 5.5 Teste de Performance
 
 6 - O que Manter Manual
-Alguns testes possuem melhor custo-benefício manualmente.
+
+Alguns testes possuem melhor custo-benefício manualmente:
 6.1 Teste Exploratório
 6.2 Teste Usabilidade 
 6.3 Teste Ad hoc
 6.4 Teste de Homologação de negócio
 
 7 - Pirâmide de Testes
+
 7.1 Base — Testes Unitários (~60%)
 Cobertura: Regras de vencimento, Cálculo de parcelas, Juros e arredondamentos e etc.
 7.2 Meio — Testes de Integração/API (~20%)
