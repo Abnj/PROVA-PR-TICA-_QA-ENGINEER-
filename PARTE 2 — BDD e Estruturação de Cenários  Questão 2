@@ -1,1 +1,39 @@
+Cenário 1: Validar duplicidade de parcelas no painel (Cenário de Erro)
+Dado que exista uma parcela já cadastrada com mesmo número, valor e vencimento
+Quando o sistema processar novamente o mesmo lançamento financeiro
+Então o Painel de Parcelas não deve criar registros duplicados
+E deve exibir apenas uma parcela na listagem
+E o sistema deve registrar a inconsistência no log da aplicação
 
+Cenário 2: Exibir parcelas pagas corretamente no painel (Cenário Feliz)
+Dado que o usuário esteja autenticado no sistema
+E exista um lançamento financeiro com parcelas quitadas
+Quando acessar o Painel de Parcelas
+E selecionar o filtro "Parcelas Pagas"
+Então o sistema deve listar apenas parcelas com status "Paga"
+E deve apresentar o valor pago corretamente
+E deve apresentar a data de pagamento da parcela
+E não deve exibir parcelas com status "Vencida" ou "A Vencer"
+
+Cenário 3: Filtrar parcelas por período (Validação de Filtros)
+Dado que o usuário esteja autenticado no sistema
+E existam parcelas cadastradas em diferentes períodos
+Quando informar a data inicial "01/04/2026"
+E informar a data final "30/04/2026"
+E aplicar o filtro de período
+Então o sistema deve exibir apenas parcelas dentro do período informado
+E não deve exibir parcelas fora do intervalo selecionado
+
+Cenário 4: Atualizar automaticamente parcela para vencida (Regra de Negócio)
+Dado que exista uma parcela com status "A Vencer"
+E a data de vencimento da parcela tenha expirado
+Quando o Painel de Parcelas for atualizado
+Então o sistema deve alterar automaticamente o status da parcela para "Vencida"
+
+E a parcela deve ser exibida na listagem de parcelas vencidas
+Cenário 5: Bloquear acesso ao Painel de Parcelas sem permissão (Permissão de Acesso)
+Dado que o usuário esteja autenticado sem permissão de acesso ao módulo financeiro
+Quando tentar acessar o Painel de Parcelas
+Então o sistema deve bloquear o acesso à funcionalidade
+E deve exibir a mensagem "Usuário sem permissão para acessar este módulo"
+E deve registrar a tentativa de acesso não autorizada no sistema
