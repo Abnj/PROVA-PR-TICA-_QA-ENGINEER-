@@ -44,7 +44,7 @@ cypress.config.js
 package.json
 
 1. Page Objects
-Objetivo: Centralizar elementos e ações das páginas para:
+Objetivo: Objetivo: Centralizar elementos, seletores e ações das páginas para reduzir duplicidade e facilitar manutenção:
 Local: cypress/support/pages/
 
 2. Commands (Custom Commands)
