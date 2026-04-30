@@ -1,90 +1,158 @@
-Apesar das regras de negócio serem as mesmas, a experiência e os riscos técnicos mudam bastante entre as plataformas.
-Eu observaria ao testar aplicações Web e Mobile considero as diferenças de:
-- interface.
-- navegação.
-- dispositivos.
-- performance.
-- interação do usuário.
-- comportamento do sistema.
+Apesar das regras de negócio serem as mesmas, a experiência do usuário e os riscos técnicos mudam bastante entre as plataformas.
 
-1 - Testes em Frontend Web.
-Características: Aplicações acessadas via navegador:
-Chrome
-Firefox
-Edge
-Safari
+Ao testar aplicações Web e Mobile, considero diferenças relacionadas a:
+• interface.
+• navegação.
+• dispositivos. 
+• performance.
+• interação do usuário.
+• comportamento do sistema.
 
-2 - Normalmente executadas em:
-desktop
-notebook
+1 - Testes em Frontend Web
+Características.
+Aplicações acessadas via navegador, como:
+• Chrome.
+• Firefox.
+• Edge.
+• Safari.
 
-- Principais pontos de validação no Web.
+Normalmente executadas em:
+• desktop.
+• notebook.
 
-3 Compatibilidade entre navegadores.
-Validar: comportamento em diferentes browsers, quebra de layout, diferenças de renderização, incompatibilidade de componentes.
+2 - Principais Pontos de Validação no Web.
+2.1 Compatibilidade Entre Navegadores.
+Validar:
+• comportamento em diferentes browsers.
+• quebra de layout.
+• diferenças de renderização.
+• incompatibilidade de componentes.
 
-4 - Responsividade.
-Validar: diferentes resoluções, zoom, redimensionamento de tela.
+2.2 Responsividade.
+Validar:
+• diferentes resoluções.
+• zoom.
+• redimensionamento de tela.
+• adaptação do layout.
 
-5 - Navegação.
-Validar: menus, links, rotas, paginação.
+2.3 Navegação.
+Validar:
+• menus.
+• links.
+• rotas.
+• paginação.
+• fluxo de navegação.
 
-6 - Performance do navegador.
-Validar: carregamento,consumo de memória, renderização.
+2.4 Performance do Navegador.
+Validar:
+• carregamento da aplicação.
+• consumo de memória.
+• renderização.
+• tempo de resposta da interface.
 
-- Principais problemas comuns no Web.
+3 - Principais Problemas Comuns no Web.
+3.1 Problemas de Layout.
+• elementos desalinhados.
+• sobreposição de componentes.
+• CSS quebrado.
 
-7 - Problemas de layout.
-Elementos desalinhados, sobreposição de componentes, CSS quebrado.
+3.2 Problemas Cross-Browser.
+Exemplo:
+•  A funcionalidade funciona no Chrome, mas apresenta falhas no Firefox ou Safari.
 
-8 - Problemas cross-browser.
-Funciona no Chrome mas falha no Firefox/Safari.
+3.3 Problemas de Sessão.
+• logout inesperado.
+• expiração de token.
+• cache inconsistente.
 
-9 - Problemas de sessão.
-Logout inesperado, expiração de token, cache inconsistente.
+3.4 Problemas de Performance.
+• lentidão de renderização.
+• travamentos da interface.
+• carregamento lento.
 
-10 - Problemas de performance.
-lentidão de renderização
+4 - Ferramentas para Web.
+Ferramentas utilizadas para automação, testes visuais e performance:
+• Cypress.
+• Selenium.
+• Playwright.
+• Robot Framework.
+• Lighthouse.
+• Percy.
+• LambdaTest.
 
-11 - Ferramentas para Web.
-Abaixo estão ferramentas para teste visual, performance, automação.
-Cypress, Selenium, Playwright, Robot Framework, Lighthouse, Percy, LambdaTest.
+5 - Testes em Frontend Mobile.
+Características
+• Aplicações mobile exigem validação em diferentes:
+• tamanhos de tela,
+• resoluções,
+• sistemas operacionais,
+• fabricantes,
+• dispositivos físicos,
+• aplicativos nativos e híbridos.
 
-12 - Testes em Frontend Mobile.
-Características: adaptação correta em diferentes tamanhos de tela, diferentes tipos de smartphones, sistema operacional, aplicativo nativo, híbrido.
+6 - Principais Pontos de Validação no Mobile.
+6.1 Responsividade.
+Validar:
+• diferentes tamanhos de tela.
+• orientações (portrait/landscape).
+• resoluções.
+• adaptação da interface.
 
-- Principais pontos de validação no Mobile..
+6.2 Gestos Touch.
+Validar:
+• scroll.
+• toque.
+• duplo toque.
+• swipe.
+• interação por gestos.
 
-13 - Responsividade.
-Validar: diferentes tamanhos de tela, orientações, resoluções.
+6.3 Compatibilidade Entre Dispositivos.
+Validar:
+• Android.
+• iOS.
+• fabricantes diferentes.
+• versões distintas do sistema operacional.
 
-14 - Gestos Touch.
-Validar: scroll, toque, duplo toque etc.
+6.4 Retrocompatibilidade.
+Validar se o sistema continua funcionando corretamente em versões anteriores do sistema operacional e dispositivos mais antigos.
 
-15 - Compatibilidade entre dispositivos .
-Validar: Android, IOS, fabricantes diferentes.
+7 - Principais Problemas Comuns no Mobile.
+7.1 Quebra de Layout Responsivo.
+• botões cortados.
+• componentes fora da tela.
+• scroll incorreto.
 
-16 - Retrocompatibilidade.
-Validar: se a capacidade do  sistema novo (hardware ou software) funcionar com versões mais antigas.
+7.2 Problemas de Touch.
+• teclado sobrepondo campos.
+• clique impreciso.
+• dificuldade de interação.
 
-- Principais problemas comuns no Mobile.
-Alto custo de compra de aparelhos, device farm, uso de simulador, mudança/lançamento constante de novos aparelhos anualmente.
+7.3 Problemas de Performance.
+• travamentos.
+• lentidão.
+• alto consumo de bateria.
+• alto consumo de memória.
 
-17 - Quebra de layout responsivo.
-Botões cortados, componentes fora da tela, scroll incorreto.
+7.4 Fragmentação de Dispositivos.
+Comportamentos diferentes entre:
+• Android e iOS.
+• fabricantes.
+• versões do sistema operacional.
 
-18 - Problemas de touch.
-Teclado sobrepondo campos, clique impreciso.
+7.5 Problemas de Conectividade.
+• falha ao trocar de rede.
+• perda de conexão.
+• comportamento offline/intermitente.
 
-19 - Performance.
-Travamentos, lentidão, alto consumo de bateria.
+8 - Ferramentas para Mobile.
+Ferramentas utilizadas para automação, testes visuais e performance:
+• Appium;
+• Maestro;
+• Detox;
+• Playwright;
+• Lighthouse Mobile.
 
-20 - Fragmentação de dispositivos
-Comportamento diferente no IOS e Android.
+• Para testes responsivos web mobile:
 
-21 - Problemas de conectividade.
-Falha ao trocar rede.
-
-22 - Ferramentas para Mobile.
-Abaixo estão ferramentas para teste visual, performance, automação.
-Appium, Maestro, Detox, Cypress, Playwright, Lighthouse Mobile.
+• Cypress.
+• Playwright.
