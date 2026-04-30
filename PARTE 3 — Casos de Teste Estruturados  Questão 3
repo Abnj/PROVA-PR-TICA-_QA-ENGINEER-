@@ -1,1 +1,52 @@
+Caso de Teste 2 — Exibir parcelas pagas corretamente no painel
+Pré-condição
+•	Usuário autenticado no sistema 
+•	Usuário com permissão de acesso ao módulo financeiro 
+•	Existir ao menos um lançamento financeiro com parcelas quitadas 
+•	Existirem parcelas com status: 
+o	Paga 
+o	Vencida 
+o	A Vencer
 
+Passos
+Passo 1 - Acessar o menu “Painel de Parcelas”
+Passo 2 - Selecionar o filtro “Parcelas Pagas”
+Passo 3 - Clicar em “Aplicar Filtro”
+Passo 4 - Visualizar a listagem retornada pelo sistema
+Passo 5 - Validar os dados exibidos das parcelas
+
+Resultado Esperado
+•	O sistema deve exibir apenas parcelas com status “Paga” 
+•	O sistema deve apresentar: 
+o	valor pago; 
+o	data de pagamento; 
+o	número da parcela; 
+o	cliente relacionado 
+•	O sistema não deve exibir parcelas: 
+o	vencidas; 
+o	a vencer 
+•	Os dados exibidos devem corresponder aos registros cadastrados no banco de dados
+
+Caso de Teste 4 — Atualizar automaticamente parcela para vencida
+Pré-condição
+•	Usuário autenticado no sistema 
+•	Existir uma parcela cadastrada com: 
+o	status “A Vencer” 
+o	data de vencimento igual ao dia anterior à data atual 
+o	pagamento não realizado
+
+Passos
+Passo 1 - Acessar o Painel de Parcelas
+Passo 2 - Atualizar/recarregar a tela do painel
+Passo 3 - Selecionar a aba “Parcelas Vencidas”
+Passo 4 - Localizar a parcela cadastrada na pré-condição
+
+Resultado Esperado
+•	O sistema deve alterar automaticamente o status da parcela para “Vencida” 
+•	A parcela deve ser exibida na listagem de parcelas vencidas 
+•	A parcela não deve mais aparecer na listagem “A Vencer” 
+•	O sistema deve manter: 
+o	valor original; 
+o	data de vencimento; 
+o	dados do cliente 
+•	A alteração de status deve estar persistida no banco de dados
