@@ -1,8 +1,11 @@
 Estratégia de Testes — Funcionalidade “Painel de Parcelas”
 1 - Objetivo da Estratégia.
-Garantir que o módulo Painel de Parcelas funcione corretamente em ambiente web e mobile, assegurando:
-Integridade das informações financeiras, Correta classificação das parcelas, Confiabilidade dos filtros
-Boa experiência do usuário, Segurança e estabilidade do sistema e Não regressão das funcionalidades já existentes
+• Integridade das informações financeiras;
+• Correta classificação das parcelas;
+• Confiabilidade dos filtros;
+• Boa experiência do usuário;
+• Segurança e estabilidade do sistema;
+• Não regressão das funcionalidades existentes.
 
 2 - Escopo da Funcionalidade.
 • Painel de Parcelas
