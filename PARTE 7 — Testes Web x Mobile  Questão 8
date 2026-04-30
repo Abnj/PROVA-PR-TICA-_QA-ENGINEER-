@@ -1,1 +1,90 @@
+Apesar das regras de negócio serem as mesmas, a experiência e os riscos técnicos mudam bastante entre as plataformas.
+Eu observaria ao testar aplicações Web e Mobile considero as diferenças de:
+- interface.
+- navegação.
+- dispositivos.
+- performance.
+- interação do usuário.
+- comportamento do sistema.
 
+1 - Testes em Frontend Web.
+Características: Aplicações acessadas via navegador:
+Chrome
+Firefox
+Edge
+Safari
+
+2 - Normalmente executadas em:
+desktop
+notebook
+
+- Principais pontos de validação no Web.
+
+3 Compatibilidade entre navegadores.
+Validar: comportamento em diferentes browsers, quebra de layout, diferenças de renderização, incompatibilidade de componentes.
+
+4 - Responsividade.
+Validar: diferentes resoluções, zoom, redimensionamento de tela.
+
+5 - Navegação.
+Validar: menus, links, rotas, paginação.
+
+6 - Performance do navegador.
+Validar: carregamento,consumo de memória, renderização.
+
+- Principais problemas comuns no Web.
+
+7 - Problemas de layout.
+Elementos desalinhados, sobreposição de componentes, CSS quebrado.
+
+8 - Problemas cross-browser.
+Funciona no Chrome mas falha no Firefox/Safari.
+
+9 - Problemas de sessão.
+Logout inesperado, expiração de token, cache inconsistente.
+
+10 - Problemas de performance.
+lentidão de renderização
+
+11 - Ferramentas para Web.
+Abaixo estão ferramentas para teste visual, performance, automação.
+Cypress, Selenium, Playwright, Robot Framework, Lighthouse, Percy, LambdaTest.
+
+12 - Testes em Frontend Mobile.
+Características: adaptação correta em diferentes tamanhos de tela, diferentes tipos de smartphones, sistema operacional, aplicativo nativo, híbrido.
+
+- Principais pontos de validação no Web.
+
+13 - Responsividade.
+Validar: diferentes tamanhos de tela, orientações, resoluções.
+
+14 - Gestos Touch.
+Validar: scroll, toque, duplo toque etc.
+
+15 - Compatibilidade entre dispositivos .
+Validar: Android, IOS, fabricantes diferentes.
+
+16 - Retrocompatibilidade.
+Validar: se a capacidade do  sistema novo (hardware ou software) funcionar com versões mais antigas.
+
+- Principais problemas comuns no Mobile.
+Alto custo de compra de aparelhos, device farm, uso de simulador, mudança/lançamento constante de novos aparelhos anualmente.
+
+17 - Quebra de layout responsivo.
+Botões cortados, componentes fora da tela, scroll incorreto.
+
+18 - Problemas de touch.
+Teclado sobrepondo campos, clique impreciso.
+
+19 - Performance.
+Travamentos, lentidão, alto consumo de bateria.
+
+20 - Fragmentação de dispositivos
+Comportamento diferente no IOS e Android.
+
+21 - Problemas de conectividade.
+Falha ao trocar rede.
+
+22 - Ferramentas para Mobile.
+Abaixo estão ferramentas para teste visual, performance, automação.
+Appium, Maestro, Detox, Cypress, Playwright, Lighthouse Mobile.
